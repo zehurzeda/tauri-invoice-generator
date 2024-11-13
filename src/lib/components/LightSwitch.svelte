@@ -7,8 +7,8 @@
 	import { buttonVariants } from '$lib/components/ui/button/index.js';
 </script>
 
-<span class="absolute left-2 top-2"
-	><DropdownMenu.Root>
+<span>
+	<DropdownMenu.Root>
 		<DropdownMenu.Trigger class={buttonVariants({ variant: 'outline', size: 'icon' })}>
 			<Sun
 				class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
@@ -23,5 +23,5 @@
 			<DropdownMenu.Item onclick={() => setMode('dark')}>Dark</DropdownMenu.Item>
 			<DropdownMenu.Item onclick={() => resetMode()}>System</DropdownMenu.Item>
 		</DropdownMenu.Content>
-	</DropdownMenu.Root></span
->
+	</DropdownMenu.Root>
+</span>

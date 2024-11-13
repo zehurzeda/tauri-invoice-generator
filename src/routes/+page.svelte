@@ -21,8 +21,8 @@
 	];
 </script>
 
-<main class="container mx-auto flex justify-center items-center h-screen">
-	<Card.Root class="w-[380px]">
+<main class="container md:mx-auto flex justify-center items-center h-full">
+	<Card.Root class="md:w-[380px]">
 		<Card.Header>
 			<Card.Title>Notifications</Card.Title>
 			<Card.Description>You have 3 unread messages.</Card.Description>
