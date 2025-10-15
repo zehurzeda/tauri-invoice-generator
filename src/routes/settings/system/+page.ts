@@ -1,14 +1,14 @@
 import { superValidate } from 'sveltekit-superforms';
 import type { PageLoad } from './$types';
 import { zod } from 'sveltekit-superforms/adapters';
-import { bankDataFormSchema, type BankDataFormSchema } from './BankForm';
 import { load as storeLoad } from '@tauri-apps/plugin-store';
 import type { z } from 'zod';
+import { systemFormSchema, type SystemFormSchema } from './SystemForm';
 
 export const load: PageLoad = async () => {
 	const store = await storeLoad('settings.json', { autoSave: false });
-	const bankData = await store.get<z.infer<BankDataFormSchema>>('bankData');
+	const systemData = await store.get<z.infer<SystemFormSchema>>('systemSettings');
 	return {
-		form: await superValidate(bankData, zod(bankDataFormSchema))
+		form: await superValidate(systemData, zod(systemFormSchema))
 	};
 };
